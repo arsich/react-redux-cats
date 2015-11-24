@@ -22,7 +22,7 @@ export default class Viewer extends React.Component {
                     <GridList cols={2} cellHeight={300} className='catsGrid'>
                         {history.map(createGridTile)}
                     </GridList>
-                    : <p>Let's save some cats!</p>
+                    : <p>Let&#39;s save some cats!</p>
                 }
             </Paper>
         );

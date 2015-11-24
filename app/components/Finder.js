@@ -11,11 +11,11 @@ export default class Finder extends React.Component {
                      src={current} />
                 <CardActions>
                     <RaisedButton className='catFinderButton'
-                                  label="Save"
+                                  label='Save'
                                   primary={true}
                                   onClick={handleSave}/>
                     <RaisedButton className='catFinderButton'
-                                  label="Next"
+                                  label='Next'
                                   secondary={true}
                                   onClick={handleNext} />
                 </CardActions>
