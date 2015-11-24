@@ -1,0 +1,19 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [
+    "react"
+  ],
+  "env": {
+    "es6": true
+  },
+  "ecmaFeatures": {
+    "jsx": true,
+    "blockBindings": true,
+    "modules": true,
+    "defaultParams": true
+  },
+  "rules": {
+    "strict": 0,
+    "new-cap": 0
+  }
+}

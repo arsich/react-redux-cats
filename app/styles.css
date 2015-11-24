@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.content {
+    width: 650px;
+    margin: 10px auto auto;
+    padding: 10px;
+
+    text-align: center;
+}
+.catImage {
+    display: block;
+
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+
+    object-fit: contain;
+}
+
+.catFinderButton {
+    padding: 10px;
+}
+
+.catsGrid {
+    width: 100%;
+    height: 800px;
+    overflow-y: auto;
+}
+
+.gridTile {
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.gridTileImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dialog {
+    overflow: auto;
+    max-height: 700px;
+}
