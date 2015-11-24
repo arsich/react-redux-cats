@@ -6,7 +6,7 @@ import Immutable from 'immutable';
 
 export default class Viewer extends React.Component {
     render() {
-        const {history, catToShow, handleShow} = this.props;
+        const {history, handleShow} = this.props;
         const createGridTile = function (url, key) {
             return (
                 <GridTile key={'cat_item_' + key}
