@@ -4,6 +4,8 @@ import {connect} from 'react-redux';
 import {requestNextCat, saveCat} from '../actions';
 import Immutable from 'immutable';
 
+import {Snackbar} from 'material-ui';
+
 import Finder from '../components/Finder';
 
 class FinderPage extends Component {
@@ -17,6 +19,8 @@ class FinderPage extends Component {
         const {dispatch, current} = this.props;
         dispatch(saveCat(current));
         dispatch(requestNextCat());
+
+        this.refs.snackbar.show();
     }
 
     handleNext() {
@@ -27,10 +31,15 @@ class FinderPage extends Component {
     render() {
         const {dispatch, current} = this.props;
         return (
-            <Finder current={current}
-                    handleNext={this.handleNext.bind(this)}
-                    handleSave={this.handleSave.bind(this)}>
-            </Finder>
+            <div>
+                <Finder current={current}
+                        handleNext={this.handleNext.bind(this)}
+                        handleSave={this.handleSave.bind(this)}>
+                </Finder>
+                <Snackbar ref='snackbar'
+                          message='Cat added to your viewer.'
+                          autoHideDuration={2000} />
+            </div>
         );
     }
 }
