@@ -29,7 +29,6 @@
     "react-router": "^1.0.0-rc1",
     "react-tap-event-plugin": "^0.2.1",
     "redux": "^3.0.4",
-    "redux-immutable": "^1.3.10",
     "redux-router": "^1.0.0-beta3",
     "redux-thunk": "^1.0.0"
   },
