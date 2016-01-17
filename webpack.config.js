@@ -5,6 +5,8 @@ var merge = require('webpack-merge');
 var pkg = require('./package.json');
 var Clean = require('clean-webpack-plugin');
 
+var autoprefixer = require('autoprefixer');
+
 var TARGET = process.env.npm_lifecycle_event;
 
 var ROOT_PATH = path.resolve(__dirname);
@@ -32,10 +34,13 @@ var common = {
             },
             {
                 test: /\.css$/,
-                loaders: ['style', 'css'],
+                loaders: ['style', 'css', 'postcss'],
                 include: APP_PATH
             }
         ]
+    },
+    postcss: function () {
+        return [autoprefixer];
     },
     plugins: [
         new HtmlWebPackPlugin(
