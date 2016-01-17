@@ -50,8 +50,7 @@ FinderPage.propTypes = {
 };
 
 function mapStateToProps(state) {
-    const immutableState = Immutable.fromJS(state.cats);
-    const current = immutableState.get('current');
+    const current = state.cats.get('current');
     return {
         current
     };

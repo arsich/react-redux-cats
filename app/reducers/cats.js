@@ -4,31 +4,29 @@ import {RECEIVE_CAT, SAVE_CAT, CLOSE_CAT, SHOW_CAT, SET_HISTORY} from '../action
 export const INITIAL_STATE = Map();
 
 export default function cats(state = INITIAL_STATE, action = {}) {
-    const immutableState = !Map.isMap(state) ? fromJS(state) : state;
-
     let newState;
     switch (action.type) {
         case SET_HISTORY:
-            newState = setHistory(immutableState, action.history);
+            newState = setHistory(state, action.history);
             break;
         case RECEIVE_CAT:
-            newState = receiveCat(immutableState, action.url);
+            newState = receiveCat(state, action.url);
             break;
         case SAVE_CAT:
-            newState = saveCat(immutableState, action.url);
+            newState = saveCat(state, action.url);
             break;
         case SHOW_CAT:
-            newState = showCat(immutableState, action.url);
+            newState = showCat(state, action.url);
             break;
         case CLOSE_CAT:
-            newState = closeCat(immutableState);
+            newState = closeCat(state);
             break;
         default:
-            newState = immutableState;
+            newState = state;
             break;
     }
 
-    return newState.toJS();
+    return newState;
 }
 
 export function setHistory(state, history) {

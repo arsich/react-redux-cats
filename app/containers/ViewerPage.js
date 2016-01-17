@@ -47,10 +47,10 @@ ViewerPage.propTypes = {
 };
 
 function mapStateToProps(state) {
-    const immutableState = Immutable.fromJS(state.cats);
-    const history = immutableState.get('history');
-    const isCatShown = immutableState.get('isCatShown');
-    const catToShow = immutableState.get('catToShow');
+    const cats = state.cats;
+    const history = cats.get('history');
+    const isCatShown = cats.get('isCatShown');
+    const catToShow = cats.get('catToShow');
     return {
         history,
         isCatShown,

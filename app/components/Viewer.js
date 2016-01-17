@@ -8,7 +8,7 @@ const Viewer = ({
     history,
     handleShow
 }) => {
-    const createGridTile = function (url, key) {
+    const createGridTile = (url, key) => {
         return (
             <GridTile key={'cat_item_' + key}
                       onClick={handleShow.bind(null, url)}
